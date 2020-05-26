@@ -6,6 +6,8 @@ const fetch = require('node-fetch')
 const axios = require('axios');
 const got = require('got')
 
+const port = process.env.PORT || 3000
+
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }))
 // parse application/json
@@ -70,4 +72,4 @@ app.post('/medeelelShaard', function (req, res) {
 
 });
 
-app.listen(3000, () => { console.log('server started!') })
+app.listen(port, () => { console.log('server started!') })
